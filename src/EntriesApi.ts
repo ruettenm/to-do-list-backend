@@ -3,7 +3,7 @@ import { v1 } from 'uuid'
 
 interface Entry {
     id: string,
-    name: string,
+    title: string,
     description?: string
 }
 
@@ -16,12 +16,12 @@ export default class EntriesApi {
 
     public create = (req: Request, res: Response) => {
         const id = v1()
-        const name = req.body.name
+        const title = req.body.title
         const description = req.body.description
 
         this.entries.push({
             id,
-            name,
+            title,
             description
         })
 

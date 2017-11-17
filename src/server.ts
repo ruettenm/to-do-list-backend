@@ -20,7 +20,7 @@ app.get('/', (_: Request, res: Response) => {
         {
             url: 'POST /api/entries',
             body: {
-                name: 'entry name',
+                title: 'entry title',
                 description: 'entry description (option)'
             },
             description: 'create a new entry'
