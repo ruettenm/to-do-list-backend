@@ -1,19 +1,20 @@
 {
     "compilerOptions": {
         "outDir": "./lib",
-        "allowJs": false,
-        "target": "es2017",
+        "allowJs": true,
+        "target": "es6",
         "module": "commonjs",
-        "declaration": true,
         "moduleResolution": "node",
         "sourceMap": true,
+        "strict": true,
         "strictNullChecks": true,
         "noImplicitAny": true,
         "noUnusedParameters": true,
         "noUnusedLocals": true,
-        "lib": [ "es2017", "dom" ]
+        "lib": [ "dom", "es7" ]
     },
     "include": [
         "./src/**/*"
     ]
 }
+
