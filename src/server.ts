@@ -4,7 +4,7 @@ import * as bodyParser from 'body-parser'
 
 import EntriesApi from './EntriesApi'
 
-const port = 8090
+const port = process.env.PORT || 8090
 const app = express()
 
 const entriesApi = new EntriesApi()
