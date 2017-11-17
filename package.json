@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Matthias Rütten <matthias.ruetten@codecentric.de>",
   "description": "backend for the ionic to-do list native app",
-  "main": "index.ts",
+  "main": "server.ts",
   "license": "LICENSE",
   "private": false,
   "engines": {
