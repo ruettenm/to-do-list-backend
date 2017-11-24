@@ -1,6 +1,7 @@
 import * as express from 'express'
 import { Request, Response } from 'express'
 import * as bodyParser from 'body-parser'
+import * as cors from 'cors'
 
 import EntriesApi from './EntriesApi'
 
@@ -10,6 +11,7 @@ const app = express()
 const entriesApi = new EntriesApi()
 
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/', (_: Request, res: Response) => {
     res.json([
