@@ -18,14 +18,15 @@ export default class EntriesApi {
         const id = v1()
         const title = req.body.title
         const description = req.body.description
-
-        this.entries.push({
+        const entry: Entry = {
             id,
             title,
             description
-        })
+        }
 
-        res.sendStatus(201)
+        this.entries.push(entry)
+
+        res.status(201).json(entry)
     }
 
     public remove = (req: Request, res: Response) => {
@@ -34,7 +35,7 @@ export default class EntriesApi {
         if (this.entries.find((entry => entry.id === id))) {
             this.entries = this.entries.filter((entry => entry.id !== id))
 
-            res.sendStatus(200)
+            res.json(this.entries)
         } else {
             res.sendStatus(404)
         }
